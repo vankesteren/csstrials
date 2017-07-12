@@ -1,0 +1,391 @@
+/* <editor-fold> General styling */
+
+html {
+  font-family: Fira Sans;
+  font-weight: 300;
+  background-color: #F8F8F8;
+}
+
+body {
+  margin: 0px;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 2.5rem;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+footer {
+  font-weight: 400;
+  background-color: #FAFAFA;
+  color: #194158;
+  padding: 20px;
+  margin: 0px;
+  margin-top: 10px;
+}
+
+.hline {
+  height: 15px;
+  width: 70%;
+  border-bottom: 0.5px solid black;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tc {
+  text-align: center;
+}
+
+.tt {
+  font-family: Fira Mono;
+}
+
+.anititle {
+  font-family: Fira Mono;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.mainbox {
+  display: block;
+  padding-left: 10%;
+  padding-right: 10%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.spacer {
+  margin-top: 25px;
+}
+
+.svgcontainer {
+  max-width: 256px;
+  max-height: 256px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
+  margin-bottom: 25px
+}
+
+.svgcontainer.small {
+  max-width: 128px;
+  max-height: 128px;
+}
+
+.svgcontainer.medium {
+  max-width: 192px;
+  max-height: 192px;
+}
+
+.svgcontainer.wide {
+  max-width: 256px;
+  max-height: 128px;
+}
+
+
+/* </editor-fold> */
+
+
+/* <editor-fold> flash*/
+
+.st0 {
+  fill: #6ABD45;
+  stroke: #6ABD45;
+}
+
+.logo {
+  -webkit-transition-duration: 0.9s;
+  -moz-transition-duration: 0.9s;
+  -o-transition-duration: 0.9s;
+  transition-duration: 0.9s;
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  transition-property: transform;
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-transition-timing-function: cubic-bezier(.59, .01, .39, .97);
+  -moz-transition-timing-function: cubic-bezier(.59, .01, .39, .97);
+  -o-transition-timing-function: cubic-bezier(.59, .01, .39, .97);
+  transition-timing-function: cubic-bezier(.59, .01, .39, .97);
+}
+
+.logo.twist {
+  transform: rotate(98.5deg);
+}
+
+.p2 {
+  -webkit-transition-duration: 0.7s;
+  -moz-transition-duration: 0.7s;
+  -o-transition-duration: 0.7s;
+  transition-duration: 0.7s;
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  transition-property: transform;
+  -webkit-transition-timing-function: cubic-bezier(.59, .01, .39, .97);
+  -moz-transition-timing-function: cubic-bezier(.59, .01, .39, .97);
+  -o-transition-timing-function: cubic-bezier(.59, .01, .39, .97);
+  transition-timing-function: cubic-bezier(.59, .01, .39, .97);
+}
+
+.p2.shove {
+  transform: translate(-18px, 108px);
+}
+
+.p1 {
+  -webkit-transition-duration: 0.7s;
+  -moz-transition-duration: 0.7s;
+  -o-transition-duration: 0.7s;
+  transition-duration: 0.7s;
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  transition-property: transform;
+  -webkit-transition-timing-function: cubic-bezier(.59, .01, .39, .97);
+  -moz-transition-timing-function: cubic-bezier(.59, .01, .39, .97);
+  -o-transition-timing-function: cubic-bezier(.59, .01, .39, .97);
+  transition-timing-function: cubic-bezier(.59, .01, .39, .97);
+}
+
+.p1.shove {
+  transform: translate(18px, -108px);
+}
+
+
+/* </editor-fold> */
+
+
+/* <editor-fold> Guitzli*/
+
+.cls-3 {
+  mask: url(#mask);
+}
+
+.cls-1 {
+  fill: #fff;
+}
+
+.bg {
+  fill: #eee;
+  transform: translate(-120px, -120px) rotate(-60deg);
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: -webkit-all;
+  -moz-transition-property: -moz-all;
+  -o-transition-property: -o-all;
+  transition-property: all;
+  -webkit-transform-origin: 0% 25%;
+  -moz-transform-origin: 0% 25%;
+  -o-transform-origin: 0% 25%;
+  transform-origin: 0% 25%;
+  -webkit-transition-timing-function: cubic-bezier(.59, .01, .39, .97);
+  -moz-transition-timing-function: cubic-bezier(.59, .01, .39, .97);
+  -o-transition-timing-function: cubic-bezier(.59, .01, .39, .97);
+  transition-timing-function: cubic-bezier(.59, .01, .39, .97);
+  width: 0%;
+  height: 0%;
+}
+
+.bg.show {
+  transform: translate(0px, 0px) rotate(0deg);
+}
+
+.grey {
+  fill: #263238;
+  -webkit-transition-duration: 0.7s;
+  -moz-transition-duration: 0.7s;
+  -o-transition-duration: 0.7s;
+  transition-duration: 0.7s;
+  -webkit-transition-property: -webkit-all;
+  -moz-transition-property: -moz-all;
+  -o-transition-property: -o-all;
+  transition-property: all;
+  -webkit-transform-origin: 0% 100%;
+  -moz-transform-origin: 0% 100%;
+  -o-transform-origin: 0% 100%;
+  transform-origin: 0% 100%;
+  transform: rotate(31deg) translateX(80px);
+  -webkit-transition-timing-function: cubic-bezier(.59, .01, .39, .97);
+  -moz-transition-timing-function: cubic-bezier(.59, .01, .39, .97);
+  -o-transition-timing-function: cubic-bezier(.59, .01, .39, .97);
+  transition-timing-function: cubic-bezier(.59, .01, .39, .97);
+  filter: url(#dropshadowgrey);
+}
+
+.blue {
+  fill: #0bbcd4;
+  -webkit-transition-duration: 0.7s;
+  -moz-transition-duration: 0.7s;
+  -o-transition-duration: 0.7s;
+  transition-duration: 0.7s;
+  -webkit-transition-property: -webkit-all;
+  -moz-transition-property: -moz-all;
+  -o-transition-property: -o-all;
+  transition-property: all;
+  -webkit-transform-origin: 53.592% 100%;
+  -moz-transform-origin: 53.592% 100%;
+  -o-transform-origin: 53.592% 100%;
+  transform-origin: 53.592% 100%;
+  transform: rotate(61deg) translateX(80px);
+  -webkit-transition-timing-function: cubic-bezier(.59, .01, .39, .97);
+  -moz-transition-timing-function: cubic-bezier(.59, .01, .39, .97);
+  -o-transition-timing-function: cubic-bezier(.59, .01, .39, .97);
+  transition-timing-function: cubic-bezier(.59, .01, .39, .97);
+  filter: url(#dropshadowblue);
+}
+
+.red {
+  fill: #ef4438;
+  -webkit-transition-duration: 0.7s;
+  -moz-transition-duration: 0.7s;
+  -o-transition-duration: 0.7s;
+  transition-duration: 0.7s;
+  -webkit-transition-property: -webkit-filter -webkit-transform;
+  -moz-transition-property: -moz-filter -moz-transform;
+  -o-transition-property: -o-filter -o-transform;
+  transition-property: filter transform -webkit-filter;
+  -webkit-transform-origin: 100% 100%;
+  -moz-transform-origin: 100% 100%;
+  -o-transform-origin: 100% 100%;
+  transform-origin: 100% 100%;
+  transform: rotate(91deg) translateX(80px);
+  -webkit-transition-timing-function: cubic-bezier(.59, .01, .39, .97);
+  -moz-transition-timing-function: cubic-bezier(.59, .01, .39, .97);
+  -o-transition-timing-function: cubic-bezier(.59, .01, .39, .97);
+  transition-timing-function: cubic-bezier(.59, .01, .39, .97);
+  filter: url(#dropshadowred);
+}
+
+.grey.show {
+  transform: rotate(0deg);
+}
+
+.blue.show {
+  transform: rotate(0deg);
+}
+
+.red.show {
+  transform: rotate(0deg);
+}
+
+
+/* </editor-fold> */
+
+
+/* <editor-fold> Loading wave*/
+
+.circ.wave {
+  animation: wave 1.5s infinite linear;
+  transform-origin: center;
+}
+
+.circ.turn {
+  animation: turn 1.5s infinite linear;
+  transform-origin: -10% -10%;
+}
+
+.c1 {
+  fill: #194158;
+}
+
+.c2 {
+  fill: #E83F6F;
+}
+
+.c3 {
+  fill: #B47025;
+}
+
+.c4 {
+  fill: #E6CCCB;
+}
+
+.c5 {
+  fill: #0D1F22;
+}
+
+.c6 {
+  fill: #32936F;
+}
+
+.c7 {
+  fill: #FFBF00;
+}
+
+.c1.wave, .c1.turn {
+  animation-delay: 0s;
+}
+
+.c2.wave, .c2.turn {
+  animation-delay: 0.1s;
+}
+
+.c3.wave, .c3.turn {
+  animation-delay: 0.2s;
+}
+
+.c4.wave, .c4.turn {
+  animation-delay: 0.3s;
+}
+
+.c5.wave, .c5.turn {
+  animation-delay: 0.4s;
+}
+
+.c6.wave, .c6.turn {
+  animation-delay: 0.5s;
+}
+
+.c7.wave, .c7.turn {
+  animation-delay: 0.6s;
+}
+
+@keyframes wave {
+  0% {
+    transform: translateY(0px);
+    animation-timing-function: ease-out;
+  }
+  15% {
+    transform: translateY(-200px);
+    animation-timing-function: ease-in-out;
+  }
+  33% {
+    transform: translateY(40px);
+    animation-timing-function: ease-in-out;
+  }
+  36% {
+    transform: translateY(0px);
+    animation-timing-function: ease-in-out;
+  }
+}
+
+@keyframes turn {
+  0% {
+    transform: rotate(0deg) scale(1);
+    animation-timing-function: ease-in-out;
+  }
+  36% {
+    transform: rotate(360deg) scale(1);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+    animation-timing-function: ease-in-out;
+  }
+}
+
+/* </editor-fold> */
+
+
+
+/* <editor-fold> More overall stuff */
+.systemfont {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+}
+/* </editor-fold> */

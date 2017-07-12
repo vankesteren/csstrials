@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="./main.js"></script>
+  <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/fira.css">
+  <link rel="stylesheet" href="./style.css">
+  <title>Logo animation</title>
+</head>
+
+<body>
+
+  <div class="mainbox">
+    
+    <div class="hline"> </div>
+    <h1 class="tc"> Animation tryouts </h1>
+    <div class="tc tt"> Click on images for cool action </div>
+    <div class="hline"> </div>
+    <div class="spacer"> </div>
+    
+    <div class="anititle"> Loading wave </div>
+    <div class="anibody tc">
+      Proper animation with keyframes.
+    </div>
+    <div class="jaja svgcontainer wide">
+      <svg viewBox="0 0 1000 500">
+        <g class="circles">
+          <circle class="c1 circ wave" cx="200" cy="350" r="25"/>
+          <circle class="c2 circ wave" cx="300" cy="350" r="25"/>
+          <circle class="c3 circ wave" cx="400" cy="350" r="25"/>
+          <circle class="c4 circ wave" cx="500" cy="350" r="25"/>
+          <circle class="c5 circ wave" cx="600" cy="350" r="25"/>
+          <circle class="c6 circ wave" cx="700" cy="350" r="25"/>
+          <circle class="c7 circ wave" cx="800" cy="350" r="25"/>
+        </g>
+      </svg>
+    </div>
+
+    <div class="anititle"> 
+      Guitzli 
+    </div>
+    <div class="anibody tc">
+      Animating an svg generated from Illustrator.
+    </div>
+    <div class="clickie svgcontainer small">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 465.12 464.36">
+          <defs>
+            <mask id="mask" x="0" y="0" width="465.12" height="464.36" maskUnits="userSpaceOnUse">
+              <g transform="translate(-21.96 -31)">
+                <rect class="cls-1" x="96.9" y="96.9" width="318.2" height="318.2" transform="translate(256 -106.04) rotate(45)"/>
+              </g>
+            </mask>
+            <filter id="dropshadowred" height="130%">
+              <feGaussianBlur in="SourceAlpha" stdDeviation="5"/> <!-- stdDeviation is how much to blur -->
+              <feOffset dx="-1" dy="-2" result="offsetblur"/> <!-- how much to offset -->
+              <feMerge> 
+                <feMergeNode/> <!-- this contains the offset blurred image -->
+                <feMergeNode in="SourceGraphic"/> <!-- this contains the element that the filter is applied to -->
+              </feMerge>
+            </filter>
+            <filter id="dropshadowblue" height="130%">
+              <feGaussianBlur in="SourceAlpha" stdDeviation="5"/> <!-- stdDeviation is how much to blur -->
+              <feOffset dx="-1" dy="-1" result="offsetblur"/> <!-- how much to offset -->
+              <feMerge> 
+                <feMergeNode/> <!-- this contains the offset blurred image -->
+                <feMergeNode in="SourceGraphic"/> <!-- this contains the element that the filter is applied to -->
+              </feMerge>
+            </filter>
+            <filter id="dropshadowgrey" height="130%">
+              <feGaussianBlur in="SourceAlpha" stdDeviation="5"/> <!-- stdDeviation is how much to blur -->
+              <feOffset dx="-1" dy="-1" result="offsetblur"/> <!-- how much to offset -->
+              <feMerge> 
+                <feMergeNode/> <!-- this contains the offset blurred image -->
+                <feMergeNode in="SourceGraphic"/> <!-- this contains the element that the filter is applied to -->
+              </feMerge>
+            </filter>
+          </defs>
+          <title>guitzli-icon</title>
+          <g class="cls-2">
+            <g class="cls-3">
+              <g id="Layer_1" data-name="Layer 1">
+                <polygon class="cls-5 bg" points="234.04,0 9.04,225 234.04,450 459.04,225"/>
+                <polygon class="cls-7 red" points="9.04,225 234.04,450 162.72,183.82" />
+                <polygon class="cls-8 blue" points="151.68,142.64 234.04,450 305.36,183.82"/>
+                <polygon class="cls-9 grey" points="329.14,95.1 234.04,450 459.04,225"/>
+              </g>
+            </g>
+          </g>
+        </svg>
+    </div>
+
+    
+    <div class="anititle"> 
+      Flash 
+    </div>
+    <div class="anibody tc">
+      First tryout using transitions.
+    </div>
+    <!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+    <div class="yoyo svgcontainer medium">
+      <svg viewBox="0 0 512 512">
+      <g class="logo">
+        <polygon class="st0 p1" points="256,256 220,472 376,238 "/>
+        <polygon class="st0 p2" points="256,256 292,40 136,274 "/>
+      </g>
+    </svg>
+    </div>
+    
+
+    <!-- new tryout here -->
+    
+    <div class="hline"> </div>
+  </div>
+  
+  <footer>
+    <div class="tc"> 
+      <a href="#">
+        ^ back to top ^
+      </a>
+    </div>
+  </footer>
+</body>
+
+
+</html>
