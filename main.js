@@ -1,36 +1,9 @@
 $(document).ready(function() {
-  //var anim = false;
-  var tid;
-  var visible = false;
-
-  function logoAnim() {
-    var to = 0
-    if (!visible) {
-      var to = 600;
-      visible = true;
-    } else {
-      visible = false;
-    }
-    setTimeout(() => {
-      $(".p1").toggleClass("shove");
-      $(".p2").toggleClass("shove");
-      $(".logo").toggleClass("twist");
-    }, 600 - to);
-    setTimeout(() => {
-      $(".titletext").toggleClass("show");
-    }, to);
-    //tid = setTimeout(logoAnim, 3000); // repeat myself
-  }
+  // Clickies/user interaction
   $(".yoyo").click(() => {
-    // if (anim) {
-    //   clearTimeout(tid);
-    //   anim = false;
-    // } else {
-    // set timeout
-    logoAnim()
-    //   anim = true
-    // }
-
+    $(".p1").toggleClass("shove");
+    $(".p2").toggleClass("shove");
+    $(".logo").toggleClass("twist");
   });
   
   $(".clickie").click(() => {
@@ -50,9 +23,24 @@ $(document).ready(function() {
     }, to);
   });
   
-  $(".circles").click(() => {
-    $(".circles").children().toggleClass("wave");
-    $(".circles").children().toggleClass("turn");
+  var numClick = 0
+  $(".jaja").click(() => {
+    if (numClick == 0) {
+      $(".circles").children().toggleClass("wave");
+      numClick++;
+    } else if (numClick == 1) {
+      $(".circles").children().toggleClass("wave");
+      $(".circles").children().toggleClass("turn");
+      numClick++;
+    } else {
+      $(".circles").children().toggleClass("turn");
+      numClick = 0;
+    }
+  });
+  
+  $(".okok").click(() => {
+    $(".rotator").toggleClass("anim");
+    $(".fivedots").children().toggleClass("anim")
   });
   
 });
