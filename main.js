@@ -1,12 +1,12 @@
 $(document).ready(function() {
   // Clickies/user interaction
-  $(".yoyo").click(() => {
+  $(".yoyo").click(function() {
     $(".p1").toggleClass("shove");
     $(".p2").toggleClass("shove");
     $(".logo").toggleClass("twist");
   });
   
-  $(".clickie").click(() => {
+  $(".clickie").click(function() {
     if ($(".bg").hasClass("show")) {
       var to = 0;
     } else {
@@ -24,7 +24,7 @@ $(document).ready(function() {
   });
   
   var numClick = 0
-  $(".jaja").click(() => {
+  $(".jaja").click(function() {
     if (numClick == 0) {
       $(".circles").children().toggleClass("wave");
       numClick++;
@@ -38,7 +38,7 @@ $(document).ready(function() {
     }
   });
   
-  $(".okok").click(() => {
+  $(".okok").click(function() {
     $(".rotator").toggleClass("anim");
     $(".fivedots").children().toggleClass("anim")
   });
