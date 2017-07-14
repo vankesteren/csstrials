@@ -28,7 +28,7 @@ footer {
 
 .hline {
   height: 15px;
-  width: 70%;
+  width: 100%;
   border-bottom: 0.5px solid black;
   margin-left: auto;
   margin-right: auto;
@@ -42,6 +42,37 @@ footer {
   font-family: Fira Mono;
 }
 
+.cc {
+  color: #478fcc;
+}
+
+.ct {
+  color: #3C9678;
+}
+
+/* link styling */
+/* unvisited link */
+a:link {
+  color: #478fcc;
+  text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+  color: #3C9678;
+  text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+  text-decoration: underline;
+}
+
+/* selected link */
+a:active {
+  text-decoration: underline;
+}
+
 .anititle {
   font-family: Fira Mono;
   text-align: center;
@@ -50,14 +81,37 @@ footer {
 
 .mainbox {
   display: block;
-  padding-left: 10%;
-  padding-right: 10%;
+  padding-left: 18%;
+  padding-right: 18%;
   margin-left: auto;
   margin-right: auto;
 }
 
 .spacer {
   margin-top: 25px;
+}
+
+#totop {
+  bottom: 0;
+  right: 0;
+  width: 30px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  position: fixed;
+  fill: grey;
+  opacity: 0;
+  transition-duration: 0.7s;
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(.59, .01, .39, .97);
+}
+
+#totop.show {
+  opacity: 1;
+}
+
+#totop:hover {
+  cursor: pointer;
+  fill: #478fcc;
 }
 
 .svgcontainer {
@@ -86,27 +140,6 @@ footer {
 
 
 /* </editor-fold> */
-
-
-/* <editor-fold> Shapeshift */
-
-#pshape0 {
-  fill: #009789;
-  visibility: visible;
-}
-
-#pshape1 {
-  fill: #4daf4e;
-  visibility: hidden;
-}
-
-#pshape2 {
-  fill: #fec111;
-  visibility: hidden;
-}
-
-/* </editor-fold> */
-
 
 
 /* <editor-fold> flash */
@@ -445,7 +478,7 @@ footer {
 /* </editor-fold> */
 
 
-/* <editor-fold> Orbital motion */
+/* <editor-fold> Wobbly motion */
 .fivedots {
   -webkit-transform: translate(250px, 250px);
           transform: translate(250px, 250px);
@@ -1127,7 +1160,9 @@ footer {
 
 /* <editor-fold> Shapeshift */
 
-
+#shape {
+  transform-origin: center;
+}
 
 /* </editor-fold> */
 

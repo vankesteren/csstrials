@@ -1,4 +1,20 @@
 $(document).ready(function() {
+  // scroll to top button
+  $(document).scroll(function() {
+    var y = $(this).scrollTop();
+    if (y > 200) {
+      $('#totop').addClass("show");
+    } else {
+      $('#totop').removeClass("show");
+    }
+  });
+  
+  $("#totop").click(function() {
+    window.scrollTo(0, 0);
+  });
+  
+  
+  
   // Clickies/user interaction
   // Flash
   $(".yoyo").click(function() {
@@ -41,8 +57,7 @@ $(document).ready(function() {
     }
   });
   
-  // Orbital motion
-  
+  // Wobbly motion
   $(".okok").click(function() {
     $(".rotator").toggleClass("anim");
     $(".fivedots").children().toggleClass("anim")
