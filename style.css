@@ -87,6 +87,16 @@ a:active {
   margin-right: auto;
 }
 
+@media screen and (max-width: 767px){
+  .mainbox {
+    display: block;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .spacer {
   margin-top: 25px;
 }
