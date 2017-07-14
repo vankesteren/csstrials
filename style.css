@@ -88,7 +88,28 @@ footer {
 /* </editor-fold> */
 
 
-/* <editor-fold> flash*/
+/* <editor-fold> Shapeshift */
+
+#pshape0 {
+  fill: #009789;
+  visibility: visible;
+}
+
+#pshape1 {
+  fill: #4daf4e;
+  visibility: hidden;
+}
+
+#pshape2 {
+  fill: #fec111;
+  visibility: hidden;
+}
+
+/* </editor-fold> */
+
+
+
+/* <editor-fold> flash */
 
 .st0 {
   fill: #6ABD45;
@@ -149,7 +170,7 @@ footer {
 /* </editor-fold> */
 
 
-/* <editor-fold> Guitzli*/
+/* <editor-fold> Guitzli */
 
 .cls-3 {
   -webkit-mask: url(#mask);
@@ -250,7 +271,7 @@ footer {
 /* </editor-fold> */
 
 
-/* <editor-fold> Loading wave*/
+/* <editor-fold> Loading wave */
 
 .circ.wave {
   -webkit-animation: wave 1.5s infinite linear;
@@ -424,7 +445,7 @@ footer {
 /* </editor-fold> */
 
 
-/* <editor-fold> Dots */
+/* <editor-fold> Orbital motion */
 .fivedots {
   -webkit-transform: translate(250px, 250px);
           transform: translate(250px, 250px);
@@ -532,7 +553,6 @@ footer {
             transition-timing-function: ease-in;
   }
 }
-
 
 @keyframes inout1 {
   0% {
@@ -1104,6 +1124,13 @@ footer {
 }
 
 /* </editor-fold> */
+
+/* <editor-fold> Shapeshift */
+
+
+
+/* </editor-fold> */
+
 
 /* <editor-fold> More overall stuff */
 .systemfont {
