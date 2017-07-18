@@ -125,8 +125,8 @@ a:active {
 }
 
 .svgcontainer {
-  max-width: 256px;
-  max-height: 256px;
+  max-width: 512px;
+  max-height: 512px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 25px;
@@ -134,18 +134,18 @@ a:active {
 }
 
 .svgcontainer.small {
-  max-width: 128px;
-  max-height: 128px;
+  max-width: 256px;
+  max-height: 256px;
 }
 
 .svgcontainer.medium {
-  max-width: 192px;
-  max-height: 192px;
+  max-width: 348px;
+  max-height: 348px;
 }
 
 .svgcontainer.wide {
-  max-width: 256px;
-  max-height: 128px;
+  max-width: 512px;
+  max-height: 256px;
 }
 
 
@@ -1178,21 +1178,50 @@ a:active {
 
 /* <editor-fold> Shuttle loop */
 
-#track {
+.scaffold {
   fill: rgba(255,255,255,0);
-  stroke: #000000;
+  stroke: #394D42;
   stroke-width: 5;
 }
-#trackleft {
+
+.track {
   fill: rgba(255,255,255,0);
-  stroke: #000000;
+  stroke: #2247A3;
   stroke-width: 5;
 }
-#trackright {
-  fill: rgba(255,255,255,0);
-  stroke: #000000;
+
+.station {
+  fill: #C99C54;
+  stroke: #513F22;
   stroke-width: 5;
 }
+
+.entrance {
+  fill: #C99C54;
+  stroke: #513F22;
+  stroke-width: 5;
+}
+
+.door {
+  fill: #394D42;
+  stroke: #513F22;
+  stroke-width: 5;
+}
+
+.banner {
+  fill: #394D42;
+  stroke-width: 0;
+}
+
+.shuttletext {
+  fill: #ABABAB;
+  stroke-width: 0;
+  font-family: Fira Sans;
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+
+
 #tracktxt {
   font-family: Fira Sans;
   font-weight: 600;
@@ -1201,15 +1230,13 @@ a:active {
 }
 
 #car {
-  /*animation: xaxis 3s infinite linear alternate;*/
-  transform: translate(-24px,-24px);
-  stroke: #000000;
+  transform: translate(-24px,-27.5px);
+  stroke: #3F6E91;
   stroke-width: 5;
-  fill: #f06392;
+  fill: #A3BFD5;
 }
 
 #carbox {
-  /*animation: yaxis 3s infinite linear alternate;*/
   transform-origin: 50% 50%;
 }
 
