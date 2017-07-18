@@ -146,7 +146,6 @@ $(document).ready(function() {
         moti.beginElement();
         intrvl = setInterval(function() {
           if (stopping) {
-            moti.endElementAt(2.99);
             if (dir == "f") {
               dir = "b";
               $("#moti").attr("keyPoints","1;0.35");
@@ -162,6 +161,8 @@ $(document).ready(function() {
               stopping = false;
               $(".doei").css("pointerEvents", "auto");
               $("#tracktxt").html("");
+              $("#moti").attr("keyPoints","0.35;0.35");
+              moti.endElementAt(0.01);
             }, 2990);
           } else {
             if (dir == "f") {
