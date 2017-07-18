@@ -1196,8 +1196,14 @@ a:active {
   stroke-width: 5;
 }
 
-.entrance {
-  fill: #C99C54;
+.building {
+  fill: #E3D8B1;
+  stroke: #513F22;
+  stroke-width: 5;
+}
+
+.roof {
+  fill: #DF606A;
   stroke: #513F22;
   stroke-width: 5;
 }
@@ -1206,6 +1212,12 @@ a:active {
   fill: #394D42;
   stroke: #513F22;
   stroke-width: 5;
+}
+
+.window {
+  fill: #353D62;
+  stroke: #513F22;
+  stroke-width: 0;
 }
 
 .banner {
@@ -1221,6 +1233,10 @@ a:active {
   font-size: 0.8rem;
 }
 
+.exit {
+  transform: translateX(190px);
+}
+
 
 #tracktxt {
   font-family: Fira Sans;
@@ -1231,9 +1247,9 @@ a:active {
 
 #car {
   transform: translate(-24px,-27.5px);
-  stroke: #3F6E91;
+  stroke: #12551C;
   stroke-width: 5;
-  fill: #A3BFD5;
+  fill: #209B32;
 }
 
 #carbox {

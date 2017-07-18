@@ -121,13 +121,23 @@ $(document).ready(function() {
   var prepared = false;
   var stopping = false;
   var dir = "f"
-  var times = 0
   var intrvl;
+  var intrvl2;
   
   var moti = document.getElementById('moti');
   moti.beginElement();
   $(".doei").click(function() {
     if (!prepared) {
+      intrvl2 = setInterval(function () {
+        var cur = $(".shuttletext").html();
+        if (cur == "Shut") {
+          $(".shuttletext").html("tle");
+        } else if (cur == "tle") {
+          $(".shuttletext").html("Loop");
+        } else {
+          $(".shuttletext").html("Shut");
+        }
+      }, 1200);
       $("#tracktxt").html("preparing...");
       $(".doei").css('pointerEvents',"none");
       moti.beginElement();
@@ -146,6 +156,8 @@ $(document).ready(function() {
         moti.beginElement();
         intrvl = setInterval(function() {
           if (stopping) {
+            clearInterval(intrvl);
+            clearInterval(intrvl2);
             if (dir == "f") {
               dir = "b";
               $("#moti").attr("keyPoints","1;0.35");
@@ -153,7 +165,6 @@ $(document).ready(function() {
               dir = "f";
               $("#moti").attr("keyPoints","0;0.35");
             }
-            clearInterval(intrvl);
             setTimeout(function () {
               dir = "f";
               riding = false;
@@ -163,6 +174,7 @@ $(document).ready(function() {
               $("#tracktxt").html("");
               $("#moti").attr("keyPoints","0.35;0.35");
               moti.endElementAt(0.01);
+              $(".shuttletext").html("");
             }, 2990);
           } else {
             if (dir == "f") {
