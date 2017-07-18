@@ -11,8 +11,7 @@ $(document).ready(function() {
   
   $("#totop").click(function() {
     window.scrollTo(0, 0);
-  });
-  
+  });  
   
   
   // Clickies/user interaction
@@ -117,5 +116,69 @@ $(document).ready(function() {
     return(aninum++ == 5 ? 0 : aninum++)
   }
   
+  //path
+  var riding = false;
+  var prepared = false;
+  var stopping = false;
+  var dir = "f"
+  var times = 0
+  var intrvl;
   
+  var moti = document.getElementById('moti');
+  moti.beginElement();
+  $(".doei").click(function() {
+    if (!prepared) {
+      $("#tracktxt").html("preparing...");
+      $(".doei").css('pointerEvents',"none");
+      moti.beginElement();
+      $("#moti").attr("keyPoints","0.35;0");
+      moti.endElementAt(3);
+      setTimeout(function () {
+        prepared = true;
+        $(".doei").css("pointerEvents", "auto");
+        $("#tracktxt").html("ready");
+      }, 3000);
+    } else {
+      if (!riding) {
+        riding = true;
+        $("#tracktxt").html("");
+        $("#moti").attr("keyPoints","0;1");
+        moti.beginElement();
+        intrvl = setInterval(function() {
+          if (stopping) {
+            moti.endElementAt(2.99);
+            if (dir == "f") {
+              dir = "b";
+              $("#moti").attr("keyPoints","1;0.35");
+            } else {
+              dir = "f";
+              $("#moti").attr("keyPoints","0;0.35");
+            }
+            clearInterval(intrvl);
+            setTimeout(function () {
+              dir = "f";
+              riding = false;
+              prepared = false;
+              stopping = false;
+              $(".doei").css("pointerEvents", "auto");
+              $("#tracktxt").html("");
+            }, 2990);
+          } else {
+            if (dir == "f") {
+              dir = "b";
+              $("#moti").attr("keyPoints","1;0");
+            } else {
+              dir = "f";
+              $("#moti").attr("keyPoints","0;1");
+            }
+          }
+        }, 3000);
+      } else {
+        $("#tracktxt").html("stopping...");
+        $(".doei").css('pointerEvents',"none");
+        stopping = true;
+      }
+    }
+    
+  })
 });

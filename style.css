@@ -1176,6 +1176,82 @@ a:active {
 
 /* </editor-fold> */
 
+/* <editor-fold> Shuttle loop */
+
+#track {
+  fill: rgba(255,255,255,0);
+  stroke: #000000;
+  stroke-width: 5;
+}
+#trackleft {
+  fill: rgba(255,255,255,0);
+  stroke: #000000;
+  stroke-width: 5;
+}
+#trackright {
+  fill: rgba(255,255,255,0);
+  stroke: #000000;
+  stroke-width: 5;
+}
+#tracktxt {
+  font-family: Fira Sans;
+  font-weight: 600;
+  fill: #f06392;
+  font-size: 4rem;
+}
+
+#car {
+  /*animation: xaxis 3s infinite linear alternate;*/
+  transform: translate(-24px,-24px);
+  stroke: #000000;
+  stroke-width: 5;
+  fill: #f06392;
+}
+
+#carbox {
+  /*animation: yaxis 3s infinite linear alternate;*/
+  transform-origin: 50% 50%;
+}
+
+@keyframes yaxis {
+  0% {
+    transform: translateY(0px);
+    
+    animation-timing-function: ease-in;
+  }
+  25% {
+    transform: translateY(300px);
+  }
+  75% {
+    transform: translateY(300px);
+    
+    animation-timing-function: ease-out;
+  }
+  100% {
+    transform: translateY(0px);
+    
+  }
+}
+
+@keyframes xaxis {
+  0% {
+    transform: translateX(0px);
+    animation-timing-function: ease-in;
+  }
+  30% {
+    transform: translateX(180px);
+  }
+  70% {
+    transform: translateX(820px);
+    animation-timing-function: ease-out;
+  }
+  100% {
+    transform: translateX(1000px);
+  }
+}
+
+
+/* </editor-fold> */
 
 /* <editor-fold> More overall stuff */
 .systemfont {

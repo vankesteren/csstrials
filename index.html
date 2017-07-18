@@ -27,6 +27,38 @@
     <div class="spacer"> </div>
     
     <div class="anititle"> 
+      Shuttle loop 
+    </div>
+    <div class="anibody tc">
+      Animation along <span class="ct">path</span>.
+    </div>
+    <div class="doei svgcontainer wide">
+      <svg viewBox="0 0 1000 500">
+        <text id="tracktxt" x = "500" y = "64" text-anchor="middle"></text>
+        <path id="trackleft" d="M 50 50 L 50 0 Z"/>
+        <path id="trackright" d="M 950 50 L 950 0 Z"/>
+        <path id="track" d="M 50 50 Q 50 425 225 425 L 600 425 Q 750 425 750 300 Q 750 200 675 200 Q 600 200 600 300 Q 600 425 750 425 Q 950 425 950 50"/>
+        
+        <g id="carbox">
+          <!-- <path id="carrie" d="M 0 0 L 24 0 L 24 24 L 0 24 Z"/> -->
+          <path id="car" d="M 0 0 L 4 0 Q 4 6 7 10 Q 14 12 21 10 L 24 6 Q 44 8 46 21 Q 46 24 24 24 L 0 24 Z"/>
+          <animateMotion id="moti"
+                          dur="3s" 
+                          repeatCount="indefinite" 
+                          begin="indefinite"
+                          calcMode="spline" 
+                          keySplines="0.6 0 0.4 1" 
+                          rotate="auto" 
+                          fill="freeze" 
+                          keyPoints="0.35;0.35" 
+                          keyTimes="0;1">
+            <mpath xlink:href="#track"/>
+          </animateMotion>
+        </g>
+      </svg>
+    </div>
+    
+    <div class="anititle"> 
       Shapeshifting 
     </div>
     <div class="anibody tc">
