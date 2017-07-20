@@ -110,18 +110,21 @@ a:active {
   position: fixed;
   fill: grey;
   opacity: 0;
+  pointer-events: none;
   transition-duration: 0.7s;
   transition-property: opacity;
   transition-timing-function: cubic-bezier(.59, .01, .39, .97);
 }
 
 #totop.show {
+  pointer-events: auto;
   opacity: 1;
+  cursor: pointer;
 }
 
 #totop:hover {
-  cursor: pointer;
   fill: #478fcc;
+  transform: scale(1.2);
 }
 
 .svgcontainer {
@@ -1303,6 +1306,7 @@ a:active {
   stroke-width: 0;
   font-size: 1.5rem;
 }
+
 
 /* </editor-fold> */
 

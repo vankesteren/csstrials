@@ -148,7 +148,7 @@ var initPoints = function(points, svgid, r, colour) {
 var svg = document.querySelector("#mousesvg");
 var pt = svg.createSVGPoint();
 //var pointsBaseState = true;
-document.documentElement.addEventListener('mousemove',function(evt){
+document.documentElement.addEventListener('mousemove', function(evt){
   pt.x = evt.clientX;
   pt.y = evt.clientY;
 
