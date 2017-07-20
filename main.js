@@ -142,12 +142,13 @@ $(document).ready(function() {
       $(".doei").css('pointerEvents',"none");
       moti.beginElement();
       $("#moti").attr("keyPoints","0.35;0");
-      moti.endElementAt(3);
       setTimeout(function () {
         prepared = true;
         $(".doei").css("pointerEvents", "auto");
+        $("#moti").attr("keyPoints","0;0");
+        moti.endElementAt(0.01);
         $("#tracktxt").html("ready");
-      }, 3000);
+      }, 2990);
     } else {
       if (!riding) {
         riding = true;
