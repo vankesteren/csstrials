@@ -63,6 +63,12 @@ var circs = [[64,64],
             [448,512],
             [512,512]];
 
+
+// the displacement is going to use a gamma distribution
+var gammaFunc = function(x, a, b, cutdist) {
+  return((x > cutdist) ? 0 : (Math.pow(b,a)*Math.pow(x,a-1)*Math.exp(-b*x))/math.gamma(a));
+}
+
 var calcDisplacement = function(mousex, mousey, points, dmultip) {
   // mouse location x,y
   var m = [[mousex,mousey]];
@@ -83,8 +89,8 @@ var calcDisplacement = function(mousex, mousey, points, dmultip) {
   // inverse euclidean distance of each point to the mouse
   var dists = xyDist.map(function(x) {
     var eudist = math.sqrt(math.sum(math.square(x)))
-    // calculate the displacement using base 4 and min dist of 6
-    var disp = Math.log(4)*dm/Math.log(Math.max(eudist,6));
+    // calculate the displacement using gamma(1.3,100) with cutoff 400
+    var disp = Math.round(dm*1000000*gammaFunc(eudist, 1.8, 1/40, 400)/gammaFunc(1.8,1.8,1/40,10000))/1000000;
     return(disp);
   });
   
@@ -97,7 +103,7 @@ var calcDisplacement = function(mousex, mousey, points, dmultip) {
 }
 
 var updatePoints = function(mousex, mousey) {
-  var cd = calcDisplacement(mousex, mousey, circs, 80);
+  var cd = calcDisplacement(mousex, mousey, circs, 10);
   var cc = $("#circles").children();
   for (i=0; i < cc.length; i++){
     var tr = "translate("+ (cd.distance[i]*math.sin(cd.angle[i])) + "," + (cd.distance[i]*math.cos(cd.angle[i])) +")";
@@ -149,10 +155,4 @@ document.documentElement.addEventListener('mousemove',function(evt){
   // The cursor point, translated into svg coordinates
   var cursorpt =  pt.matrixTransform(svg.getScreenCTM().inverse());
   updatePoints(cursorpt.x, cursorpt.y);
-  // if (cursorpt.x > -100 && cursorpt.y > -100 && cursorpt.x < 676 && cursorpt.y < 676) {
-  //   
-  //   pointsBaseState = false;
-  // } else if (pointsBaseState == false) {
-  //   // resetPoints();
-  // }
 }, false);
