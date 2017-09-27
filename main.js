@@ -195,4 +195,36 @@ $(document).ready(function() {
     }
     
   })
+  
+  // josephus
+  var jexisting = false;
+  window.jrunning = false;
+  var jstopped = false;
+  window.jfinished = false;
+  var j;
+  $(".jose").click(function() {
+    
+    if (!jexisting) {
+      j = new jose("josephus", 20);
+      j.init();
+      jexisting = true;
+    } else if (window.jrunning) {
+      jstopped = true;
+      window.jrunning = false;
+      j.stop();      
+    } else if (jstopped || window.jfinished) {
+      jstopped = false;
+      window.jfinished = false;
+      j.reset();
+    } else {
+      window.jrunning = true;
+      j.start(10000, function() {
+        window.jfinished = true;
+        window.jrunning = false;
+      });
+    }
+  })
+  
+  
+  
 });
