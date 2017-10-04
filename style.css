@@ -1299,14 +1299,6 @@ a:active {
 
 /* </editor-fold> */
 
-/* <editor-fold> Josephus */
-.josCirc {
-  transition-property: all;
-  transition-duration: 0.4s;
-  transition-timing-function: cubic-bezier(.59, .01, .39, .97);
-}
-
-/* </editor-fold> */
 
 /* <editor-fold> More overall stuff */
 

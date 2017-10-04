@@ -205,7 +205,7 @@ $(document).ready(function() {
   $(".jose").click(function() {
     
     if (!jexisting) {
-      j = new jose("josephus", 20);
+      j = new josephus("josephus", 20);
       j.init();
       jexisting = true;
     } else if (window.jrunning) {
@@ -218,7 +218,7 @@ $(document).ready(function() {
       j.reset();
     } else {
       window.jrunning = true;
-      j.start(10000, function() {
+      j.start(5000, function() {
         window.jfinished = true;
         window.jrunning = false;
       });
